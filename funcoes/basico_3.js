@@ -29,6 +29,9 @@ console.log(subtrair(1, 2, 3))
 console.log(subtrair(1, 2, 3, 5, 7))
 console.log(subtrair(1, 2, 3, 5, 7, 9))
 
+const multiplicar = (a, b) => a * b
+console.log(subtrair(3, 9))
+
 //Criando arrow functions dentro de outras arrows
 const potencia = base => exp => Math.pow(base, exp)
 console.log(potencia(2)(8))
