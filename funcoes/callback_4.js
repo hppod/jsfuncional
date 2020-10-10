@@ -19,3 +19,18 @@ const nomesItensValidos = carrinho
     .filter(qtdeMaiorQueZero)
     .map(getNome)
 console.log(nomesItensValidos)
+
+Array.prototype.meuFilter = function (fn) {
+    const novoArray = []
+    for (let i = 0; i < this.length; i++) {
+        if (fn(this[i], i, this)) {
+            novoArray.push(this[i])
+        }
+    }
+    return novoArray
+}
+
+const nomesItensValidos2 = carrinho
+    .meuFilter(qtdeMaiorQueZero)
+    .map(getNome)
+console.log(nomesItensValidos2)
